@@ -10,9 +10,9 @@
 
 @interface UIImage (UIImageAdditions)
 
-- (UIImage *)resizeImage:(UIImage *)image convertToWidth:(float)width;
-- (UIImage *)resizeImage:(UIImage *)image convertToHeight:(float)height;
-- (UIImage *)resizeImage:(UIImage *)image imageSize:(CGSize)size;
++ (UIImage *)resizeImage:(UIImage *)image convertToWidth:(float)width;
++ (UIImage *)resizeImage:(UIImage *)image convertToHeight:(float)height;
++ (UIImage *)resizeImage:(UIImage *)image imageSize:(CGSize)size;
 
 
 @end

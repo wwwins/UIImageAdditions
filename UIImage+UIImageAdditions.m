@@ -11,7 +11,7 @@
 @implementation UIImage (UIImageAdditions)
 
 // fix the aspect ratio of the image
-- (UIImage *)resizeImage:(UIImage *)image convertToWidth:(float)width
++ (UIImage *)resizeImage:(UIImage *)image convertToWidth:(float)width
 {
   float ratio = image.size.width / width;
   float height = image.size.height / ratio;
@@ -25,7 +25,7 @@
 }
 
 // fix the aspect ratio of the image
-- (UIImage *)resizeImage:(UIImage *)image convertToHeight:(float)height
++ (UIImage *)resizeImage:(UIImage *)image convertToHeight:(float)height
 {
   float ratio = image.size.height / height;
   float width = image.size.width / ratio;
@@ -39,7 +39,7 @@
   
 }
 
--(UIImage*)resizeImage:(UIImage *)image imageSize:(CGSize)size
++ (UIImage *)resizeImage:(UIImage *)image imageSize:(CGSize)size
 {
   //UIGraphicsBeginImageContext(size);
   UIGraphicsBeginImageContextWithOptions(size, NO, [UIScreen mainScreen].scale);
