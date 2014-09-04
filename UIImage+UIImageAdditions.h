@@ -14,5 +14,6 @@
 + (UIImage *)resizeImage:(UIImage *)image convertToHeight:(float)height;
 + (UIImage *)resizeImage:(UIImage *)image imageSize:(CGSize)size;
 
+- (UIImage *)imageWithTintColor:(UIColor *)tintColor;
 
 @end
