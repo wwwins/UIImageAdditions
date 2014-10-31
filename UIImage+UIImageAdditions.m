@@ -1,6 +1,5 @@
 //
 //  UIImage+UIImageAdditions.m
-//  MyLayoutViewDemo
 //
 //  Created by wwwins on 2014/7/24.
 //  Copyright (c) 2014年 isobar. All rights reserved.
@@ -9,6 +8,16 @@
 #import "UIImage+UIImageAdditions.h"
 
 @implementation UIImage (UIImageAdditions)
+
+// https://developer.apple.com/library/ios/qa/qa1817/_index.html#//apple_ref/doc/uid/DTS40014134
++ (UIImage *)snapshot:(UIView *)view
+{
+  UIGraphicsBeginImageContextWithOptions(view.bounds.size, YES, 0);
+  [view drawViewHierarchyInRect:view.bounds afterScreenUpdates:YES];
+  UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
+  UIGraphicsEndImageContext();
+  return image;
+}
 
 // fix the aspect ratio of the image
 + (UIImage *)resizeImage:(UIImage *)image convertToWidth:(float)width
